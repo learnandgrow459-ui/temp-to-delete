@@ -1,0 +1,23 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: argocd-server-ingress
+  namespace: argocd
+spec:
+  hosts:
+  - "*" # Replace with your specific domain if you have one
+  gateways:
+  - bookinfo-gateway # Format: gateway-namespace/gateway-name
+  http:
+  - match:
+    - uri:
+        prefix: /argocd/
+    - uri:
+        exact: /argocd
+    rewrite:
+      uri: / # This strips /argocd and forwards just / to the backend
+    route:
+    - destination:
+        host: argocd-server.argocd.svc.cluster.local
+        port:
+          number: 80 # Use 443 if argocd-server has TLS enabled
