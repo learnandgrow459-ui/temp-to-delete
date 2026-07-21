@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/SyedSohail123/temp-istio.git
     targetRevision: HEAD
-    path: temp/expose-argocd-ui
+    path: expose-argocd-ui
 
   destination:
     server: https://kubernetes.default.svc
