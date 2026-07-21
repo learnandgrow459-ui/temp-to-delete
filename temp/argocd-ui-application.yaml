@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/SyedSohail123/temp-istio.git
+    repoURL: https://github.com/learnandgrow459-ui/temp-to-delete.git
     targetRevision: HEAD
     path: expose-argocd-ui
 
