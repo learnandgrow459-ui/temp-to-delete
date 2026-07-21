@@ -7,7 +7,7 @@ spec:
   hosts:
   - "*" # Replace with your specific domain if you have one
   gateways:
-  - bookinfo-gateway # Format: gateway-namespace/gateway-name
+  - default/bookinfo-gateway # Format: gateway-namespace/gateway-name
   http:
   - match:
     - uri:
